@@ -341,4 +341,16 @@ CMakeFiles/membot.dir/src/chatlogic.cpp.o: \
  /usr/include/wx-3.0/wx/valtext.h /usr/include/wx-3.0/wx/filedlg.h \
  /usr/include/wx-3.0/wx/gtk/filedlg.h \
  /usr/include/wx-3.0/wx/gtk/filectrl.h /usr/include/wx-3.0/wx/filectrl.h \
- /usr/include/wx-3.0/wx/mdi.h /usr/include/wx-3.0/wx/gtk/mdi.h
+ /usr/include/wx-3.0/wx/mdi.h /usr/include/wx-3.0/wx/gtk/mdi.h \
+ /usr/include/c++/7/memory /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/7/ext/concurrence.h \
+ /usr/include/c++/7/bits/unique_ptr.h \
+ /usr/include/c++/7/bits/shared_ptr.h \
+ /usr/include/c++/7/bits/shared_ptr_base.h \
+ /usr/include/c++/7/bits/allocated_ptr.h \
+ /usr/include/c++/7/bits/refwrap.h \
+ /usr/include/c++/7/ext/aligned_buffer.h \
+ /usr/include/c++/7/bits/shared_ptr_atomic.h \
+ /usr/include/c++/7/bits/atomic_base.h \
+ /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/7/backward/auto_ptr.h
