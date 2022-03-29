@@ -1336,6 +1336,19 @@ CMakeFiles/membot.dir/src/chatlogic.cpp.o: ../src/chatlogic.cpp \
   /usr/include/wx-3.0/wx/imagxpm.h \
   /usr/include/wx-3.0/wx/imagiff.h \
   /usr/include/wx-3.0/wx/gtk/bitmap.h \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
   ../src/chatlogic.h \
   ../src/chatgui.h \
   /usr/include/wx-3.0/wx/wx.h \
@@ -1508,20 +1521,7 @@ CMakeFiles/membot.dir/src/chatlogic.cpp.o: ../src/chatlogic.cpp \
   /usr/include/wx-3.0/wx/gtk/filectrl.h \
   /usr/include/wx-3.0/wx/filectrl.h \
   /usr/include/wx-3.0/wx/mdi.h \
-  /usr/include/wx-3.0/wx/gtk/mdi.h \
-  /usr/include/c++/7/memory \
-  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/7/ext/concurrence.h \
-  /usr/include/c++/7/bits/unique_ptr.h \
-  /usr/include/c++/7/bits/shared_ptr.h \
-  /usr/include/c++/7/bits/shared_ptr_base.h \
-  /usr/include/c++/7/bits/allocated_ptr.h \
-  /usr/include/c++/7/bits/refwrap.h \
-  /usr/include/c++/7/ext/aligned_buffer.h \
-  /usr/include/c++/7/bits/shared_ptr_atomic.h \
-  /usr/include/c++/7/bits/atomic_base.h \
-  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/7/backward/auto_ptr.h
+  /usr/include/wx-3.0/wx/gtk/mdi.h
 
 CMakeFiles/membot.dir/src/graphedge.cpp.o: ../src/graphedge.cpp \
   /usr/include/stdc-predef.h \
@@ -1828,6 +1828,24 @@ CMakeFiles/membot.dir/src/graphedge.cpp.o: ../src/graphedge.cpp \
   /usr/include/wx-3.0/wx/imagxpm.h \
   /usr/include/wx-3.0/wx/imagiff.h \
   /usr/include/wx-3.0/wx/gtk/bitmap.h \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
   ../src/graphedge.h
 
 CMakeFiles/membot.dir/src/graphnode.cpp.o: ../src/graphnode.cpp \
@@ -2135,7 +2153,25 @@ CMakeFiles/membot.dir/src/graphnode.cpp.o: ../src/graphnode.cpp \
   /usr/include/wx-3.0/wx/imagpnm.h \
   /usr/include/wx-3.0/wx/imagxpm.h \
   /usr/include/wx-3.0/wx/imagiff.h \
-  /usr/include/wx-3.0/wx/gtk/bitmap.h
+  /usr/include/wx-3.0/wx/gtk/bitmap.h \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h
 
 
 ../src/graphnode.cpp:
