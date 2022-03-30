@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include "chatbot.h"
+#include <memory>     // Task 4: Include needed for smart pointers. 
 
 
 // forward declarations
@@ -16,11 +17,13 @@ private:
     ////
 
     // data handles (owned)
-    std::vector<GraphEdge *> _childEdges;  // edges to subsequent nodes
+    // Task 4: Make edges unique: 
+    std::vector<std::unique_ptr<GraphEdge>> _childEdges;
+    // std::vector<GraphEdge *> _childEdges;  // edges to subsequent nodes
 
     // data handles (not owned)
     std::vector<GraphEdge *> _parentEdges; // edges to preceding nodes 
-    ChatBot *_chatBot;
+    ChatBot _chatBot;                      // Task 5: Remove *. 
 
     ////
     //// EOF STUDENT CODE
@@ -43,13 +46,13 @@ public:
 
     // proprietary functions
     void AddToken(std::string token); // add answers to list
-    void AddEdgeToParentNode(GraphEdge *edge);
-    void AddEdgeToChildNode(GraphEdge *edge);
+    void AddEdgeToParentNode(GraphEdge *edge);                      // Task 4: No change, parent is only reference.
+    void AddEdgeToChildNode(std::unique_ptr<GraphEdge> edge);       // Task 4: Use unique_pointer to own child node 
 
     //// STUDENT CODE
     ////
 
-    void MoveChatbotHere(ChatBot *chatbot);
+    void MoveChatbotHere(ChatBot chatbot);                          // Task 5: chatbot is now a unique pointer, so argument has to be changed (* removed). 
 
     ////
     //// EOF STUDENT CODE

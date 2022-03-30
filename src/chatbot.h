@@ -4,6 +4,7 @@
 #include <wx/bitmap.h>
 #include <string>
 
+
 class GraphNode; // forward declaration
 class ChatLogic; // forward declaration
 
@@ -25,10 +26,22 @@ public:
     // constructors / destructors
     ChatBot();                     // constructor WITHOUT memory allocation
     ChatBot(std::string filename); // constructor WITH memory allocation
-    ~ChatBot();
+
 
     //// STUDENT CODE
     ////
+    // Task 2: Implementing the Rule of 5: (Based on Udacity Skript / Tutorial Material)
+        // 1) Define appropriate Destructor
+        // 2) Overload assignment operator for shallow copy
+        // 3) Overload Copy constructor for shallow copy
+        // 4) Create Move constructor for transfering ownership
+        // 5) Overload assignment operator for moving ressource ownership
+
+    ~ChatBot();                                 // Destructor (Rule 1)
+    ChatBot &operator=(const ChatBot &source);  // Copy Operator (Rule 2)
+    ChatBot(const ChatBot &source);             // Copy Constructor (Rule 3)
+    ChatBot(ChatBot &&source);                  // Move Constructor (Rule 4)
+    ChatBot &operator=(ChatBot &&source);       // Move Operator (Rule 5)
 
     ////
     //// EOF STUDENT CODE

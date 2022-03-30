@@ -30,7 +30,7 @@ ChatBot::ChatBot(std::string filename)
     _image = new wxBitmap(filename, wxBITMAP_TYPE_PNG);
 }
 
-ChatBot::~ChatBot()
+ChatBot::~ChatBot()                                     // Rule 1: Destructor
 {
     std::cout << "ChatBot Destructor" << std::endl;
 
@@ -44,6 +44,84 @@ ChatBot::~ChatBot()
 
 //// STUDENT CODE
 ////
+
+// Task 2: Implementing the rule of 5 (Details see header file)
+ChatBot &ChatBot::operator=(const ChatBot &source)   // Rule 2: Copy Operator
+{
+    // Based on Udacitiy Script
+    std::cout << "ChatBot Copy Assignment Operator" << std::endl;                                        // Simple Debug Message
+    //std::cout << "ASSIGNING content of instance " << &source << " to instance " << this << std::endl;   // Debug message
+
+    if(this == &source)
+        return *this;       // If source and destination is the same, just return destination
+
+    // Copy content of the source (type ChatBot)
+    _currentNode = source._currentNode;             // Copy pointer to _currentNode
+    _rootNode = source._rootNode;                   // Copy pointer to rootNode
+    _chatLogic = source._chatLogic;                 // Copy pointer to chatLogic
+    _chatLogic->SetChatbotHandle(this);             // Set chatbot handle to this position (new position)
+    _image = new wxBitmap();                        // Allocate the image on the heap
+    *_image = *source._image;                       // Copy the image into the freslhy allocated memory. 
+    return *this;                                   // Return the copied object. 
+
+}
+
+ChatBot::ChatBot(const ChatBot &source)             // Rule 3: Copy Constructor
+{
+    // Based on Udacitiy Script
+    std::cout <<"ChatBot Copy Constructor" << std::endl;                                                // Simple Debug Message
+    //std::cout << "COPYING content of instance " << &source << " to instance " << this << std::endl;     // Debug message
+
+     // Copy content of the source (type ChatBot)
+    _currentNode = source._currentNode;             // Copy pointer to _currentNode
+    _rootNode = source._rootNode;                   // Copy pointer to rootNode
+    _chatLogic = source._chatLogic;                 // Copy pointer to chatLogic
+    _chatLogic->SetChatbotHandle(this);             // Set chatbot handle to this position (new position)
+    _image = new wxBitmap();                        // Allocate the image on the heap
+    *_image = *source._image;                       // Copy the image into the freslhy allocated memory. 
+    
+}
+
+ChatBot::ChatBot(ChatBot &&source)                // Rule 4: Move Constructor
+{
+    // Base on Udacity Script
+    std::cout << "ChatBot Move Constructor" << std::endl;                                               // Simple Debug Message
+    //std::cout << "MOVING instance " << &source << " to instance " << this << std::endl;                 // Debug Message
+
+    // Moving content from source to destination
+    _currentNode = source._currentNode;             // Copy pointer to _currentNode
+    source._currentNode = nullptr;                  // Invalidated sourece
+    _rootNode = source._rootNode;                   // Copy pointer to rootNode
+    source._rootNode = nullptr;                     // Invalidated sourece
+    _chatLogic = source._chatLogic;                 // Copy pointer to chatLogic   
+    _chatLogic->SetChatbotHandle(this);             // Set chatbot handle to this position (new position)
+    source._chatLogic = nullptr;                    // Invalidated sourece
+    _image = source._image;                         // Move avatar image
+    source._image = NULL;                           // NULL because of wxWidget implementation.
+
+}
+
+ChatBot &ChatBot::operator=(ChatBot &&source)       // Rule 5: Move Operator
+{
+    std::cout << "ChatBot Move Assignment Operator" << std::endl;                                         // Simple Debug Message
+    //std::cout << "MOVING (assign) instance " << &source << " to instance " << this << std::endl;        // Debug Message
+
+    if(this == &source)
+        return *this;                               // If source and destination is the same, just return destination
+
+    // moving content from source to destination
+    _currentNode = source._currentNode;             // Copy pointer to _currentNode
+    source._currentNode = nullptr;                  // Invalidated sourece
+    _rootNode = source._rootNode;                   // Copy pointer to rootNode
+    source._rootNode = nullptr;                     // Invalidated sourece
+    _chatLogic = source._chatLogic;                 // Copy pointer to chatLogic   
+    _chatLogic->SetChatbotHandle(this);             // Set chatbot handle to this position (new position)
+    source._chatLogic = nullptr;                    // Invalidated sourece
+    _image = source._image;                         // Move avatar image
+    source._image = NULL;                           // NULL because of wxWidget implementation.
+    return *this;                                   // Return the copied object. 
+
+}
 
 ////
 //// EOF STUDENT CODE

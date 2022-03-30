@@ -2,6 +2,7 @@
 #define CHATGUI_H_
 
 #include <wx/wx.h>
+#include <memory>       // Task 1: Needed for smart pointers.
 
 class ChatLogic; // forward declaration
 
@@ -16,7 +17,9 @@ private:
     //// STUDENT CODE
     ////
 
-    ChatLogic *_chatLogic;
+    // Task 1: _chatLogic needs to be an exclusive resource of ChatbotPanelDialog
+    std::unique_ptr<ChatLogic> _chatLogic;      // EXCLUSIVE ressource of ChatBotPanelDialog.
+    // ChatLogic *_chatLogic;
 
     ////
     //// EOF STUDENT CODE
@@ -27,7 +30,8 @@ public:
     ~ChatBotPanelDialog();
 
     // getter / setter
-    ChatLogic *GetChatLogicHandle() { return _chatLogic; }
+    ChatLogic *GetChatLogicHandle() { return _chatLogic.get(); }    // Task 1: Get a raw pointer to _chatLogic.
+    // ChatLogic *GetChatLogicHandle() { return _chatLogic; }
 
     // events
     void paintEvent(wxPaintEvent &evt);
